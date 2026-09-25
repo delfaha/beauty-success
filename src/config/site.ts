@@ -8,8 +8,8 @@ export const SITE = {
   locale: 'fr_FR',
 } as const
 
-/** URL publique du site (variable VITE_SITE_URL en production, origine courante sinon). */
+/** URL publique du site (variable VITE_SITE_URL en production, origine courante + chemin de base sinon). */
 export function siteUrl(path = ''): string {
-  const base = import.meta.env.VITE_SITE_URL || window.location.origin
+  const base = import.meta.env.VITE_SITE_URL || window.location.origin + import.meta.env.BASE_URL
   return `${base.replace(/\/$/, '')}${path}`
 }

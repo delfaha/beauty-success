@@ -1,5 +1,6 @@
 import { Check, CreditCard, LoaderCircle, Lock, Smartphone, Wallet } from 'lucide-react'
 import { useRef, useState, type FormEvent, type ReactNode } from 'react'
+import { Link } from 'react-router'
 import { OrderSummary } from '@/components/cart/OrderSummary'
 import { PromoCodeForm } from '@/components/cart/PromoCodeForm'
 import { ProductImage } from '@/components/product/ProductImage'
@@ -477,7 +478,7 @@ export default function CheckoutPage() {
               <Checkbox
                 label={
                   <>
-                    J’accepte les <a href="/aide/cgv" target="_blank" className="link-swipe">conditions générales de vente</a>.
+                    J’accepte les <Link to="/aide/cgv" target="_blank" className="link-swipe">conditions générales de vente</Link>.
                   </>
                 }
                 name="acceptTerms"

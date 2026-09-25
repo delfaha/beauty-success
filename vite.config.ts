@@ -5,6 +5,8 @@ import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  // Chemin de publication : « / » par défaut, « /beauty-success/ » pour GitHub Pages (variable BASE_PATH).
+  base: process.env.BASE_PATH || '/',
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {

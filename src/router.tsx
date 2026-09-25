@@ -36,4 +36,7 @@ export const router = createBrowserRouter([
       },
     ],
   },
-])
+], {
+  // Même préfixe que le `base` de Vite : le site fonctionne aussi dans un sous-dossier (GitHub Pages).
+  basename: import.meta.env.BASE_URL,
+})

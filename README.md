@@ -1,5 +1,7 @@
 # Beauty Success — boutique de parfums & coffrets
 
+**Site en ligne : https://delfaha.github.io/beauty-success/**
+
 Boutique e-commerce de parfumerie : parfums femme, homme, unisexes, coffrets, nouveautés et promotions.
 Direction artistique « broadsheet » inspirée de D.S. & Durga : toile crème, encre noire, typographie
 géante, angles vifs, aucune ombre — avec un doré très discret réservé aux détails.
@@ -104,5 +106,11 @@ Les filtres, le tri et la pagination sont stockés dans l'URL, par exemple
 
 ## Déploiement
 
-Application monopage : configurer l'hébergeur pour renvoyer `index.html` sur toutes les routes
+**GitHub Pages (en place)** : chaque envoi sur la branche `main` déclenche `.github/workflows/deploy.yml`,
+qui construit le site dans le sous-dossier `/beauty-success/` (variable `BASE_PATH`), régénère le sitemap
+avec l'adresse Pages, copie `index.html` en `404.html` pour les URL profondes, puis publie `dist/`.
+Suivi des publications : onglet **Actions** du dépôt.
+
+Autre hébergeur : application monopage, configurer l'hébergeur pour renvoyer `index.html` sur toutes les routes
 (Netlify : `/* /index.html 200` ; Vercel : rewrite vers `/index.html` ; Nginx : `try_files $uri /index.html`).
+Sans `BASE_PATH`, le site est construit pour la racine du domaine.
