@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /checkout
+Disallow: /cart
+Disallow: /compte
+
+Sitemap: https://www.beauty-success.example/sitemap.xml
